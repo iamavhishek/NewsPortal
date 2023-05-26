@@ -1,0 +1,2 @@
+# Newsportal Django Project
+
