@@ -1,0 +1,12 @@
+{% extends "main.html" %}
+
+{% block title %}{{ news.title }}{% endblock %}
+
+{% block content %}
+
+    <h1>{{ news.title }}</h1>
+    <small>{{ news.description }}</small>
+    <p>{{ news.content }}</p>
+
+
+{% endblock %}

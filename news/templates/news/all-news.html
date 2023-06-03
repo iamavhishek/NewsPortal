@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+
+{% block title %}Article Name{% endblock %}
+
+{% block content %}
+
+    <div class="container my-5">
+        <div class="row row-cols-1 row-cols-lg-3 g-4">
+            {% for news in newsCol %}
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top"
+                             alt="Skyscrapers"/>
+                        <div class="card-body">
+                            <a href="{% url 'article' news.id %}">
+                                <h5 class="card-title">{{ news.title }}</h5>
+                            </a>
+                            <p class="card-text">
+                                {{ news.content }}
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
